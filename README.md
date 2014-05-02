@@ -2,7 +2,7 @@ killu
 =====
 This script pretty much the same as killall -u user proc  
 The reason for this tool is I don't want to install the psmisc package  
-Nothing wrong with it, but if I don't need the whole package. Or even all of killall's options, so I figured I'd save some space. 
+Nothing wrong with it, but I don't need the whole package, or even all of killall's options, so I figured I'd save some space.  
 
 Usage
 =====
