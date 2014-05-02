@@ -1,0 +1,15 @@
+#!/bin/bash
+#This is pretty much the same as killall -u user proc
+#The reason for this tool is I don't want to install the psmisc package 
+#Nothing wrong with it, but if I don't need the whole package. Or even all of killall's options, so I figured I'd save some space. 
+
+USER=$1
+PROC=$2
+
+if [ $# -eq 0 ]
+then
+        echo -e "This program sends the KILL signal to all processes that match a provided name and are run by a provider user \nUSAGE: $0 [username] [process]\nExample: Kill all python processes ran by miku\n$0 miku python"
+        exit
+else
+	kill -9 $(ps -u $USER | grep $PROC | cut --characters=1,2,3,4,5,6)
+fi
